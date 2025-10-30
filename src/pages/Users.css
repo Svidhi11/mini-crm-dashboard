@@ -1,0 +1,200 @@
+.users-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  color: #000; /* Ensure text is black throughout */
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.users-header h2 {
+  font-size: 22px;
+  color: #000; /* Black heading */
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #9ca3af;
+  outline: none;
+  width: 200px;
+  color: #000; /* Input text black */
+}
+
+.actions input::placeholder {
+  color: #555; /* Slightly gray placeholder */
+}
+
+.add-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.add-btn:hover {
+  background: #2563eb;
+}
+
+/* Table Styles */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000; /* Table text black */
+}
+
+.users-table th,
+.users-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #d1d5db;
+  text-align: left;
+}
+
+.users-table th {
+  background: #f3f4f6;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+}
+
+.users-table td {
+  color: #000;
+}
+
+.users-table tr:hover {
+  background: #f9fafb;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #065f46; /* Dark green text */
+}
+
+.status.inactive {
+  background: #fee2e2;
+  color: #991b1b; /* Dark red text */
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #92400e; /* Dark orange text */
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000; /* Default black icon/text */
+}
+
+.edit-btn:hover {
+  color: #2563eb; /* Blue on hover */
+}
+
+.delete-btn:hover {
+  color: #dc2626; /* Red on hover */
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  color: #000; /* Pagination text black */
+}
+
+.pagination button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pagination button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filters select,
+.filters input[type="date"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #9ca3af;
+  color: #000;
+}
+
+.date-range label {
+  font-weight: 500;
+  color: #000;
+  margin-right: 4px;
+}
+.filter-dropdown {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  color: black;
+}
+
+.users-table th, .users-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.inactive {
+  color: red;
+}
+
+.status.pending {
+  color: orange;
+}
+

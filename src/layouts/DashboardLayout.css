@@ -1,0 +1,242 @@
+/* Main Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #1f2937, #111827);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-item {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  background: #374151;
+  color: white;
+}
+
+.nav-item.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Main Section */
+.main-content {
+  flex: 1;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Topbar */
+.topbar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 1px solid #d1d5db;
+}
+
+.search-bar {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 15px;
+  color: #111827;
+  width: 200px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  opacity: 1;
+}
+
+/* User Info & Logout */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #0f0f0f;
+}
+
+.username {
+  font-weight: 500;
+  color: #111827;
+}
+
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Page Content */
+.page-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 60px;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-item {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .search-bar {
+    width: 120px;
+  }
+
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+/* 🌗 THEME SUPPORT */
+.theme-light {
+  --bg-main: #f3f4f6;
+  --bg-card: #ffffff;
+  --text-color: #111827;
+  --sidebar-bg: linear-gradient(180deg, #1e3a8a, #1e40af);
+  --sidebar-text: #e0e7ff;
+}
+
+.theme-dark {
+  --bg-main: #1f2937;
+  --bg-card: #374151;
+  --text-color: #f9fafb;
+  --sidebar-bg: linear-gradient(180deg, #111827, #1f2937);
+  --sidebar-text: #d1d5db;
+}
+
+.theme-night {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --text-color: #e2e8f0;
+  --sidebar-bg: linear-gradient(180deg, #0f172a, #1e293b);
+  --sidebar-text: #cbd5e1;
+}
+
+/* Apply variables globally */
+.dashboard-container {
+  background: var(--bg-main);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Sidebar colors follow theme variables */
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Topbar */
+.topbar {
+  background: var(--bg-card);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 🌙 Theme Toggle Button */
+.theme-toggle-btn {
+  background: #0c0d0f;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background: #50535b;
+  transform: scale(1.05);
+}
