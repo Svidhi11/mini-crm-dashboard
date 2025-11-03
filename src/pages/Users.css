@@ -30,7 +30,7 @@
   border: 1px solid #9ca3af;
   outline: none;
   width: 200px;
-  color: #000; /* Input text black */
+  color: #f5f5f5; /* Input text black */
 }
 
 .actions input::placeholder {
